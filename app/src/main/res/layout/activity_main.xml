@@ -14,9 +14,7 @@
 
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context="com.example.jsbridge.databindingstudy.MainActivity"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="0dp">
+        tools:context="com.example.jsbridge.databindingstudy.MainActivity">
 
         <TextView
             android:id="@+id/tvName"

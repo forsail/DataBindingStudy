@@ -1,10 +1,9 @@
 package com.example.jsbridge.databindingstudy;
 
 import android.databinding.DataBindingUtil;
-import android.databinding.ObservableField;
 import android.graphics.Color;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Toast;
 

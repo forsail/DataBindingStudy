@@ -32,6 +32,7 @@
         android:layout_height="match_parent"
         tools:context="com.example.jsbridge.databindingstudy.MainActivity">
 
+        <!-- app:onClickListener="@{activity.onClick}"-->
         <TextView
             android:id="@+id/tvName"
             android:layout_width="wrap_content"

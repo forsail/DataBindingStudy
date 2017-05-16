@@ -11,22 +11,26 @@ import com.example.jsbridge.databindingstudy.databinding.ActivityMainBinding;
 
 public class MainActivity extends AppCompatActivity {
     ObservableUser2 user;
+    ActivityMainBinding binding;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        ActivityMainBinding binding = DataBindingUtil.setContentView(this, R.layout.activity_main);
+        binding = DataBindingUtil.setContentView(this, R.layout.activity_main);
+        bindData(binding);
+        initUI();
+    }
+
+    private void bindData(ActivityMainBinding binding) {
         user = new ObservableUser2();
         user.name.set("asher");
         binding.setUser(user);
+        binding.setHandlers(new MyHandlers());
+        binding.setPresenter(new Presenter());
+    }
+
+    private void initUI() {
         binding.tvName.setBackgroundColor(Color.BLUE);
         binding.tvMobile.setText("asher2");
-        binding.tvMobile.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                user.name.set("test");
-                Toast.makeText(MainActivity.this, user.name.get(), Toast.LENGTH_SHORT).show();
-            }
-        });
     }
 }

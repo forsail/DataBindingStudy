@@ -4,10 +4,11 @@ import android.databinding.DataBindingUtil;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.view.View;
-import android.widget.Toast;
 
 import com.example.jsbridge.databindingstudy.databinding.ActivityMainBinding;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
     ObservableUser2 user;
@@ -27,10 +28,13 @@ public class MainActivity extends AppCompatActivity {
         binding.setUser(user);
         binding.setHandlers(new MyHandlers());
         binding.setPresenter(new Presenter());
+        List<String> list = new ArrayList();
+        list.add("asher test");
+        list.add("asher test2");
+        binding.setMyList(list);
     }
 
     private void initUI() {
         binding.tvName.setBackgroundColor(Color.BLUE);
-        binding.tvMobile.setText("asher2");
     }
 }

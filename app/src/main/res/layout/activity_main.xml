@@ -7,6 +7,8 @@
 
         <import type="com.example.jsbridge.databindingstudy.MyHandlers" />
 
+        <import type="java.util.List" />
+
         <variable
             name="user"
             type="com.example.jsbridge.databindingstudy.ObservableUser2" />
@@ -18,6 +20,10 @@
         <variable
             name="presenter"
             type="com.example.jsbridge.databindingstudy.Presenter" />
+
+        <variable
+            name="myList"
+            type="List&lt;String&gt;" />
     </data>
 
     <android.support.constraint.ConstraintLayout
@@ -50,6 +56,7 @@
             android:gravity="center"
             android:onClick="@{handlers::onClickMobile}"
             android:padding="10dp"
+            android:text="@{myList[1]}"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
